@@ -141,6 +141,16 @@ class Client
                 'http://www.szamlazz.hu/xmlnyugtaget http://www.szamlazz.hu/docs/xsds/nyugtaget/xmlnyugtaget.xsd',
             ],
         ],
+
+        // Download invoice PDF
+        'DOWNLOAD_INVOICE_PDF'    => [
+            'name'   => 'action-szamla_agent_pdf',
+            'schema' => [
+                'xmlszamlapdf',
+                'http://www.szamlazz.hu/xmlszamlapdf',
+                'http://www.szamlazz.hu/xmlszamlapdf https://www.szamlazz.hu/szamla/docs/xsds/agentpdf/xmlszamlapdf.xsd',
+            ],
+        ],
     ];
 
     /**
@@ -1090,6 +1100,28 @@ class Client
         return $this->invoiceFactory(Invoice::class, ...$this->getCommonInvoice($invoice instanceof Invoice ? $invoice->invoiceNumber : $invoice));
     }
 
+    public function downloadInvoicePdf($invoiceNumber, $path)
+    {
+        $contents = $this->writer(
+            function (XMLWriter $writer) use (&$invoiceNumber) {
+                $this->writeCredentials($writer);
+                $writer->writeElement('szamlaszam', $invoiceNumber);
+                $writer->writeElement('valaszVerzio', 2);
+            },
+            ...self::ACTIONS['DOWNLOAD_INVOICE_PDF']['schema']
+        );
+
+        $response = (string)$this->send(self::ACTIONS['DOWNLOAD_INVOICE_PDF']['name'], $contents)->getBody();
+        // get pdf from xml response
+        preg_match('/<pdf>(.*?)<\/pdf>/s', $response, $matches);
+        if (!isset($matches[1])) {
+            throw new CommonResponseException(null, 'PDF not found in response!');
+        }
+        $response = base64_decode($matches[1]);
+        file_put_contents($path, $response);
+        return true;
+    }
+
     /**
      * @param string|Invoice $invoice
      *
@@ -1209,7 +1241,7 @@ class Client
             // Customer fields
             $customer = [
                 'customerName'      => html_entity_decode($xml['vevo']['nev']),
-                'customerCountry'   => html_entity_decode($xml['vevo']['cim']['orszag']),
+                'customerCountry'   => html_entity_decode(isset($xml['vevo']['cim']['orszag']) ? $xml['vevo']['cim']['orszag'] : 'Magyarország'),
                 'customerZipCode'   => $xml['vevo']['cim']['irsz'],
                 'customerCity'      => html_entity_decode($xml['vevo']['cim']['telepules']),
                 'customerAddress'   => $xml['vevo']['cim']['cim'],
