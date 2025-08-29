@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\Errors;
+namespace Nemerichun\SzamlazzHu\Client\Errors;
 
 
 use Exception;

@@ -1,24 +1,24 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Client\Invoice;
+namespace Nemerichun\SzamlazzHu\Tests\Client\Invoice;
 
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
-use SzuniSoft\SzamlazzHu\Client\Client;
-use SzuniSoft\SzamlazzHu\Client\Errors\InvoiceValidationException;
-use SzuniSoft\SzamlazzHu\Client\Errors\UnknownOrderIdException;
-use SzuniSoft\SzamlazzHu\Client\Models\InvoiceCancellationResponse;
-use SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods;
-use SzuniSoft\SzamlazzHu\Invoice;
-use SzuniSoft\SzamlazzHu\ProformaInvoice;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\InvoiceCancellation\InvoiceCancellationPdfResponse;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\InvoiceCancellation\InvoiceCancellationXmlResponse;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\InvoiceCreationResponse;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\InvoiceRetrievalResponse;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\ProformaInvoiceDeletionResponse;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\ProformaInvoiceRetrievalResponse;
+use Nemerichun\SzamlazzHu\Client\Client;
+use Nemerichun\SzamlazzHu\Client\Errors\InvoiceValidationException;
+use Nemerichun\SzamlazzHu\Client\Errors\UnknownOrderIdException;
+use Nemerichun\SzamlazzHu\Client\Models\InvoiceCancellationResponse;
+use Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods;
+use Nemerichun\SzamlazzHu\Invoice;
+use Nemerichun\SzamlazzHu\ProformaInvoice;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\InvoiceCancellation\InvoiceCancellationPdfResponse;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\InvoiceCancellation\InvoiceCancellationXmlResponse;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\InvoiceCreationResponse;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\InvoiceRetrievalResponse;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\ProformaInvoiceDeletionResponse;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\ProformaInvoiceRetrievalResponse;
 
 class InvoiceTest extends TestCase {
 
@@ -432,9 +432,9 @@ class InvoiceTest extends TestCase {
         $invoice->orderNumber = 1;
         $invoice->setClient($client);
 
-        /**  @var \SzuniSoft\SzamlazzHu\Client\Models\InvoiceCreationResponse $response */
+        /**  @var \Nemerichun\SzamlazzHu\Client\Models\InvoiceCreationResponse $response */
         $invoice->save(false, null, null, $response);
-        $this->assertInstanceOf(\SzuniSoft\SzamlazzHu\Client\Models\InvoiceCreationResponse::class, $response);
+        $this->assertInstanceOf(\Nemerichun\SzamlazzHu\Client\Models\InvoiceCreationResponse::class, $response);
     }
 
     /** @test */
@@ -446,10 +446,10 @@ class InvoiceTest extends TestCase {
         $invoice->orderNumber = 1;
         $invoice->setClient($client);
 
-        /**  @var \SzuniSoft\SzamlazzHu\Client\Models\InvoiceCreationResponse $response */
+        /**  @var \Nemerichun\SzamlazzHu\Client\Models\InvoiceCreationResponse $response */
         $result = $invoice->save(false, null, null, $response);
         $this->assertEquals($invoice, $result);
-        $this->assertInstanceOf(\SzuniSoft\SzamlazzHu\Client\Models\InvoiceCreationResponse::class, $response);
+        $this->assertInstanceOf(\Nemerichun\SzamlazzHu\Client\Models\InvoiceCreationResponse::class, $response);
     }
 
     /** @test */
@@ -470,11 +470,11 @@ class InvoiceTest extends TestCase {
         $client = $this->client(new ProformaInvoiceDeletionResponse());
         $proformaInvoice = $this->getProformaInvoice('D-2018-123', $client);
 
-        /**  @var \SzuniSoft\SzamlazzHu\Client\Models\ProformaInvoiceDeletionResponse $response */
+        /**  @var \Nemerichun\SzamlazzHu\Client\Models\ProformaInvoiceDeletionResponse $response */
         $result = $proformaInvoice->delete($response);
 
         $this->assertEquals($proformaInvoice, $result);
-        $this->assertInstanceOf(\SzuniSoft\SzamlazzHu\Client\Models\ProformaInvoiceDeletionResponse::class, $response);
+        $this->assertInstanceOf(\Nemerichun\SzamlazzHu\Client\Models\ProformaInvoiceDeletionResponse::class, $response);
     }
 
 

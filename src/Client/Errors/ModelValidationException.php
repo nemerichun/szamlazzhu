@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\Errors;
+namespace Nemerichun\SzamlazzHu\Client\Errors;
 
 
 use Exception;
 use Illuminate\Contracts\Validation\Validator;
-use SzuniSoft\SzamlazzHu\Internal\AbstractModel;
+use Nemerichun\SzamlazzHu\Internal\AbstractModel;
 use Throwable;
 
 abstract class ModelValidationException extends Exception

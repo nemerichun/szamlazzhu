@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\ApiErrors;
+namespace Nemerichun\SzamlazzHu\Client\ApiErrors;
 
 
 /**
  * Class XmlReadingException
- * @package SzuniSoft\SzamlazzHu\Client\ApiErrors
+ * @package Nemerichun\SzamlazzHu\Client\ApiErrors
  *
  * The request XML could be read. Maybe malformed or wrongly formatted
  */

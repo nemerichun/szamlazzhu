@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Util;
+namespace Nemerichun\SzamlazzHu\Util;
 
 
 use RuntimeException;

@@ -1,15 +1,15 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Internal\Support;
+namespace Nemerichun\SzamlazzHu\Internal\Support;
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableMerchant;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableMerchant;
 
 /**
  * Trait SimplifiesMerchant
- * @package SzuniSoft\SzamlazzHu\Support
+ * @package Nemerichun\SzamlazzHu\Support
  *
  * [Attributes]
  * @property-read string $merchantBank

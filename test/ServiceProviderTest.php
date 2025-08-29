@@ -1,9 +1,9 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests;
+namespace Nemerichun\SzamlazzHu\Tests;
 
-use SzuniSoft\SzamlazzHu\Client\Client;
+use Nemerichun\SzamlazzHu\Client\Client;
 
 class ServiceProviderTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Fixtures;
+namespace Nemerichun\SzamlazzHu\Tests\Fixtures;
 
 
-use SzuniSoft\SzamlazzHu\Contracts\ArrayablePayment;
+use Nemerichun\SzamlazzHu\Contracts\ArrayablePayment;
 
 class Payment implements ArrayablePayment {
     protected $paymentMethod;
@@ -31,7 +31,7 @@ class Payment implements ArrayablePayment {
 
     /**
      * [
-     *  'paymentMethod' => '', // @see \SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods::$paymentMethods
+     *  'paymentMethod' => '', // @see \Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods::$paymentMethods
      *  'amount' => '', // The amount was paid
      *  'comment' => '', // A single note on payment
      * ]
@@ -41,7 +41,7 @@ class Payment implements ArrayablePayment {
     function toPaymentArray()
     {
         return [
-            'paymentMethod' => $this->paymentMethod, // @see \SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods::$paymentMethods
+            'paymentMethod' => $this->paymentMethod, // @see \Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods::$paymentMethods
             'amount' => $this->amount, // The amount was paid
             'comment' => $this->comment, // A single note on payment
         ];

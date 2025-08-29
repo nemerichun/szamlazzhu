@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\Models;
+namespace Nemerichun\SzamlazzHu\Client\Models;
 
 use Illuminate\Support\Str;
 use Psr\Http\Message\ResponseInterface;
-use SzuniSoft\SzamlazzHu\Client\Client;
-use SzuniSoft\SzamlazzHu\Invoice;
+use Nemerichun\SzamlazzHu\Client\Client;
+use Nemerichun\SzamlazzHu\Invoice;
 
 
 /**
@@ -15,7 +15,7 @@ use SzuniSoft\SzamlazzHu\Invoice;
  * [Attributes]
  * @property-read string $cancellationInvoiceNumber
  *
- * @package SzuniSoft\SzamlazzHu\Client\Models
+ * @package Nemerichun\SzamlazzHu\Client\Models
  */
 class InvoiceCancellationResponse extends CommonResponseModel {
 
@@ -53,7 +53,7 @@ class InvoiceCancellationResponse extends CommonResponseModel {
 
     /**
      * @return Invoice|null
-     * @throws \SzuniSoft\SzamlazzHu\Client\ApiErrors\CommonResponseException
+     * @throws \Nemerichun\SzamlazzHu\Client\ApiErrors\CommonResponseException
      */
     public function cancellationInvoice()
     {

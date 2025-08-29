@@ -1,14 +1,14 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\ApiErrors;
+namespace Nemerichun\SzamlazzHu\Client\ApiErrors;
 
 
 use Exception;
 
 /**
  * Class AuthorizationException
- * @package SzuniSoft\SzamlazzHu\Client\ApiErrors
+ * @package Nemerichun\SzamlazzHu\Client\ApiErrors
  *
  * Abstract authorization exception
  */

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Fixtures;
+namespace Nemerichun\SzamlazzHu\Tests\Fixtures;
 
 
 class CustomerHolder {
-    use \SzuniSoft\SzamlazzHu\Internal\Support\CustomerHolder;
+    use \Nemerichun\SzamlazzHu\Internal\Support\CustomerHolder;
 
     protected $attributes = [];
 

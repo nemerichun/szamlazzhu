@@ -1,11 +1,11 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests;
+namespace Nemerichun\SzamlazzHu\Tests;
 
 
-use SzuniSoft\SzamlazzHu\Internal\Support\ItemHolder;
-use SzuniSoft\SzamlazzHu\Invoice;
+use Nemerichun\SzamlazzHu\Internal\Support\ItemHolder;
+use Nemerichun\SzamlazzHu\Invoice;
 
 class InvoiceTest extends \Orchestra\Testbench\TestCase {
 

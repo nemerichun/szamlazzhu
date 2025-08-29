@@ -1,10 +1,10 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Fixtures;
+namespace Nemerichun\SzamlazzHu\Tests\Fixtures;
 
 
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableItem;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableItem;
 
 class Item implements ArrayableItem {
     public $name;

@@ -1,17 +1,17 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\Models;
+namespace Nemerichun\SzamlazzHu\Client\Models;
 
 use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
-use SzuniSoft\SzamlazzHu\Client\Client;
-use SzuniSoft\SzamlazzHu\Util\XmlParser;
+use Nemerichun\SzamlazzHu\Client\Client;
+use Nemerichun\SzamlazzHu\Util\XmlParser;
 
 
 /**
  * Class CommonResponseModel
- * @package SzuniSoft\SzamlazzHu\Client\Models
+ * @package Nemerichun\SzamlazzHu\Client\Models
  */
 abstract class CommonResponseModel
 {

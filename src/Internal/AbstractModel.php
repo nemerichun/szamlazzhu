@@ -1,16 +1,16 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Internal;
+namespace Nemerichun\SzamlazzHu\Internal;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods;
+use Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods;
 
 
 /**
  * Class AbstractModel
- * @package SzuniSoft\SzamlazzHu\Internal
+ * @package Nemerichun\SzamlazzHu\Internal
  *
  * [Ancestor attributes]
  * @property string $paymentMethod (transfer, cash, bank_card, check, etc..)

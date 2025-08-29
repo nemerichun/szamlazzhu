@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\Errors;
+namespace Nemerichun\SzamlazzHu\Client\Errors;
 
 
 use Illuminate\Contracts\Validation\Validator;
-use SzuniSoft\SzamlazzHu\Internal\AbstractModel;
-use SzuniSoft\SzamlazzHu\Receipt;
+use Nemerichun\SzamlazzHu\Internal\AbstractModel;
+use Nemerichun\SzamlazzHu\Receipt;
 use Throwable;
 
 class ReceiptValidationException extends ModelValidationException

@@ -1,13 +1,13 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\Errors;
+namespace Nemerichun\SzamlazzHu\Client\Errors;
 
 
 use Illuminate\Contracts\Validation\Validator;
-use SzuniSoft\SzamlazzHu\Internal\AbstractInvoice;
-use SzuniSoft\SzamlazzHu\Internal\AbstractModel;
-use SzuniSoft\SzamlazzHu\Invoice;
+use Nemerichun\SzamlazzHu\Internal\AbstractInvoice;
+use Nemerichun\SzamlazzHu\Internal\AbstractModel;
+use Nemerichun\SzamlazzHu\Invoice;
 use Throwable;
 
 class InvoiceValidationException extends ModelValidationException

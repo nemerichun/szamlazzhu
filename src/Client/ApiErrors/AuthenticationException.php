@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\ApiErrors;
+namespace Nemerichun\SzamlazzHu\Client\ApiErrors;
 
 
 /**
  * Class AuthenticationException
- * @package SzuniSoft\SzamlazzHu\Client\ApiErrors
+ * @package Nemerichun\SzamlazzHu\Client\ApiErrors
  *
  * The provided login credentials are invalid
  */

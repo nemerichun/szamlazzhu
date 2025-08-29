@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\Models;
+namespace Nemerichun\SzamlazzHu\Client\Models;
 use Carbon\Carbon;
 
 /**
  * Class ReceiptCreationResponse
- * @package SzuniSoft\SzamlazzHu\Client\Models
+ * @package Nemerichun\SzamlazzHu\Client\Models
  *
  * [Attributes]
  * @property-read int $id

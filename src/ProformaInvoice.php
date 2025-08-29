@@ -1,20 +1,20 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu;
+namespace Nemerichun\SzamlazzHu;
 
-use SzuniSoft\SzamlazzHu\Client\ApiErrors\CommonResponseException;
-use SzuniSoft\SzamlazzHu\Client\Errors\InvoiceValidationException;
-use SzuniSoft\SzamlazzHu\Client\Errors\ModelValidationException;
-use SzuniSoft\SzamlazzHu\Client\Errors\UnknownOrderIdException;
-use SzuniSoft\SzamlazzHu\Client\Models\InvoiceCreationResponse;
-use SzuniSoft\SzamlazzHu\Client\Models\ProformaInvoiceDeletionResponse;
-use SzuniSoft\SzamlazzHu\Internal\AbstractInvoice;
-use SzuniSoft\SzamlazzHu\Internal\Support\ClientAccessor;
+use Nemerichun\SzamlazzHu\Client\ApiErrors\CommonResponseException;
+use Nemerichun\SzamlazzHu\Client\Errors\InvoiceValidationException;
+use Nemerichun\SzamlazzHu\Client\Errors\ModelValidationException;
+use Nemerichun\SzamlazzHu\Client\Errors\UnknownOrderIdException;
+use Nemerichun\SzamlazzHu\Client\Models\InvoiceCreationResponse;
+use Nemerichun\SzamlazzHu\Client\Models\ProformaInvoiceDeletionResponse;
+use Nemerichun\SzamlazzHu\Internal\AbstractInvoice;
+use Nemerichun\SzamlazzHu\Internal\Support\ClientAccessor;
 
 /**
  * Class ProFormaInvoice
- * @package SzuniSoft\SzamlazzHu
+ * @package Nemerichun\SzamlazzHu
  *
  * Pro-forma invoice is a kind of special invoice which is used to
  * send an `invoice` that is a prepayment request to the customer.

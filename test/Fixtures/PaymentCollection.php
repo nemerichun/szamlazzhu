@@ -1,11 +1,11 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Fixtures;
+namespace Nemerichun\SzamlazzHu\Tests\Fixtures;
 
 
-use SzuniSoft\SzamlazzHu\Contracts\ArrayablePayment;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayablePaymentCollection;
+use Nemerichun\SzamlazzHu\Contracts\ArrayablePayment;
+use Nemerichun\SzamlazzHu\Contracts\ArrayablePaymentCollection;
 
 class PaymentCollection implements ArrayablePaymentCollection {
 

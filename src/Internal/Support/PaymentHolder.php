@@ -1,13 +1,13 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Internal\Support;
+namespace Nemerichun\SzamlazzHu\Internal\Support;
 
 
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayablePayment;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayablePaymentCollection;
+use Nemerichun\SzamlazzHu\Contracts\ArrayablePayment;
+use Nemerichun\SzamlazzHu\Contracts\ArrayablePaymentCollection;
 
 trait PaymentHolder {
 

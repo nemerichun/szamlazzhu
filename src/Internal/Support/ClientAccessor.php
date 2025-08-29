@@ -1,14 +1,14 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Internal\Support;
+namespace Nemerichun\SzamlazzHu\Internal\Support;
 
 
-use SzuniSoft\SzamlazzHu\Client\Client;
+use Nemerichun\SzamlazzHu\Client\Client;
 
 /**
  * Trait ClientAccessor
- * @package SzuniSoft\SzamlazzHu\Support
+ * @package Nemerichun\SzamlazzHu\Support
  */
 trait ClientAccessor
 {

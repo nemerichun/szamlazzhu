@@ -1,11 +1,11 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Internal\Support;
+namespace Nemerichun\SzamlazzHu\Internal\Support;
 
 
 use Illuminate\Validation\Rule;
-use SzuniSoft\SzamlazzHu\Invoice;
+use Nemerichun\SzamlazzHu\Invoice;
 
 trait InvoiceValidationRules
 {

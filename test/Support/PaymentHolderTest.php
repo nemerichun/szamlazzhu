@@ -1,15 +1,15 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Support;
+namespace Nemerichun\SzamlazzHu\Tests\Support;
 
 
 use Illuminate\Support\Collection;
 use Orchestra\Testbench\TestCase;
-use SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods;
-use SzuniSoft\SzamlazzHu\Tests\Fixtures\Payment;
-use SzuniSoft\SzamlazzHu\Tests\Fixtures\PaymentCollection;
-use SzuniSoft\SzamlazzHu\Tests\Fixtures\PaymentHolder;
+use Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods;
+use Nemerichun\SzamlazzHu\Tests\Fixtures\Payment;
+use Nemerichun\SzamlazzHu\Tests\Fixtures\PaymentCollection;
+use Nemerichun\SzamlazzHu\Tests\Fixtures\PaymentHolder;
 
 class PaymentHolderTest extends TestCase {
 

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests;
+namespace Nemerichun\SzamlazzHu\Tests;
 
 
-use SzuniSoft\SzamlazzHu\Internal\Support\ItemHolder;
-use SzuniSoft\SzamlazzHu\Internal\Support\PaymentHolder;
-use SzuniSoft\SzamlazzHu\Receipt;
+use Nemerichun\SzamlazzHu\Internal\Support\ItemHolder;
+use Nemerichun\SzamlazzHu\Internal\Support\PaymentHolder;
+use Nemerichun\SzamlazzHu\Receipt;
 
 class ReceiptTest extends \Orchestra\Testbench\TestCase {
 

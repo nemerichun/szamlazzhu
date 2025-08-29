@@ -1,17 +1,17 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Client\Receipt;
+namespace Nemerichun\SzamlazzHu\Tests\Client\Receipt;
 
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
-use SzuniSoft\SzamlazzHu\Client\Errors\ReceiptValidationException;
-use SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods;
-use SzuniSoft\SzamlazzHu\Receipt;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\ReceiptCancellationResponse;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\ReceiptCreationResponse;
-use SzuniSoft\SzamlazzHu\Tests\Client\Fixtures\ReceiptRetrievalResponse;
+use Nemerichun\SzamlazzHu\Client\Errors\ReceiptValidationException;
+use Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods;
+use Nemerichun\SzamlazzHu\Receipt;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\ReceiptCancellationResponse;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\ReceiptCreationResponse;
+use Nemerichun\SzamlazzHu\Tests\Client\Fixtures\ReceiptRetrievalResponse;
 
 class ReceiptTest extends TestCase {
 
@@ -32,7 +32,7 @@ class ReceiptTest extends TestCase {
 
         Storage::fake($receiptDisk);
 
-        /**  @var \SzuniSoft\SzamlazzHu\Client\Models\ReceiptCreationResponse $response */
+        /**  @var \Nemerichun\SzamlazzHu\Client\Models\ReceiptCreationResponse $response */
         $receipt->save(false, $response);
 
         $this->assertEquals('NYGT-2017-123', $response->receiptNumber);
@@ -59,7 +59,7 @@ class ReceiptTest extends TestCase {
 
         Storage::fake($receiptDisk);
 
-        /**  @var \SzuniSoft\SzamlazzHu\Client\Models\ReceiptCreationResponse $response */
+        /**  @var \Nemerichun\SzamlazzHu\Client\Models\ReceiptCreationResponse $response */
         $receipt->save(false, $response);
 
         $this->assertEquals('NYGT-2017-123', $response->receiptNumber);
@@ -168,7 +168,7 @@ class ReceiptTest extends TestCase {
 
         Storage::fake($receiptDisk);
 
-        /**  @var \SzuniSoft\SzamlazzHu\Client\Models\ReceiptCancellationResponse $response */
+        /**  @var \Nemerichun\SzamlazzHu\Client\Models\ReceiptCancellationResponse $response */
         $result = $receipt->cancel(false, $response);
 
         $this->assertSame($result, $receipt);
@@ -196,7 +196,7 @@ class ReceiptTest extends TestCase {
 
         Storage::fake($receiptDisk);
 
-        /**  @var \SzuniSoft\SzamlazzHu\Client\Models\ReceiptCancellationResponse $response */
+        /**  @var \Nemerichun\SzamlazzHu\Client\Models\ReceiptCancellationResponse $response */
         $receipt->cancel(true, $response);
         Storage::disk($receiptDisk)->assertMissing("$receiptPath/$response->originalReceiptNumber.pdf");
     }

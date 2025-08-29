@@ -1,20 +1,20 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Contracts;
+namespace Nemerichun\SzamlazzHu\Contracts;
 
-use SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods;
+use Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods;
 
 /**
  * Interface ArrayablePayment
- * @package SzuniSoft\SzamlazzHu\Contracts
+ * @package Nemerichun\SzamlazzHu\Contracts
  */
 interface ArrayablePayment
 {
 
     /**
      * [
-     *  'paymentMethod' => '', // @see \SzuniSoft\SzamlazzHu\Internal\Support\PaymentMethods::$paymentMethods
+     *  'paymentMethod' => '', // @see \Nemerichun\SzamlazzHu\Internal\Support\PaymentMethods::$paymentMethods
      *  'amount' => '', // The amount was paid
      *  'comment' => '', // A single note on payment
      * ]

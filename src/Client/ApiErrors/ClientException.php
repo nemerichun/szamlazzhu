@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\ApiErrors;
+namespace Nemerichun\SzamlazzHu\Client\ApiErrors;
 
 
 use Exception;

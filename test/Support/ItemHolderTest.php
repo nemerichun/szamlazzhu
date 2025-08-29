@@ -1,14 +1,14 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Support;
+namespace Nemerichun\SzamlazzHu\Tests\Support;
 
 
 use Illuminate\Support\Collection;
 use Orchestra\Testbench\TestCase;
-use SzuniSoft\SzamlazzHu\Tests\Fixtures\Item;
-use SzuniSoft\SzamlazzHu\Tests\Fixtures\ItemCollection;
-use SzuniSoft\SzamlazzHu\Tests\Fixtures\ItemHolder;
+use Nemerichun\SzamlazzHu\Tests\Fixtures\Item;
+use Nemerichun\SzamlazzHu\Tests\Fixtures\ItemCollection;
+use Nemerichun\SzamlazzHu\Tests\Fixtures\ItemHolder;
 
 class ItemHolderTest extends TestCase {
 

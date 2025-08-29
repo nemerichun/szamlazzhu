@@ -1,6 +1,6 @@
 <?php
 
-namespace SzuniSoft\SzamlazzHu\Client\ApiErrors;
+namespace Nemerichun\SzamlazzHu\Client\ApiErrors;
 
 
 class ReceiptAlreadyExistsException extends ClientException {

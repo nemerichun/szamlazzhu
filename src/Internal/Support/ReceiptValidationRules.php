@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Internal\Support;
+namespace Nemerichun\SzamlazzHu\Internal\Support;
 
 
 use Illuminate\Validation\Rule;

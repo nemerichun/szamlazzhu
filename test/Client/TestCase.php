@@ -1,11 +1,11 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Client;
+namespace Nemerichun\SzamlazzHu\Tests\Client;
 
 
 use GuzzleHttp\Handler\MockHandler;
-use SzuniSoft\SzamlazzHu\Client\Errors\InvalidClientConfigurationException;
+use Nemerichun\SzamlazzHu\Client\Errors\InvalidClientConfigurationException;
 
 class TestCase extends \Orchestra\Testbench\TestCase {
 
@@ -38,7 +38,7 @@ class TestCase extends \Orchestra\Testbench\TestCase {
      * @param mixed $stack
      * @param array $config
      * @param array $merchant
-     * @return \SzuniSoft\SzamlazzHu\Client\Client
+     * @return \Nemerichun\SzamlazzHu\Client\Client
      */
     protected function client($stack = [], $config = [], $merchant = [])
     {
@@ -48,7 +48,7 @@ class TestCase extends \Orchestra\Testbench\TestCase {
         }
 
         try {
-            return new \SzuniSoft\SzamlazzHu\Client\Client(
+            return new \Nemerichun\SzamlazzHu\Client\Client(
                 array_merge(
                     [
                         'credentials' => [

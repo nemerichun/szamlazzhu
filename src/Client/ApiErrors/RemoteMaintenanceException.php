@@ -1,12 +1,12 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\ApiErrors;
+namespace Nemerichun\SzamlazzHu\Client\ApiErrors;
 
 
 /**
  * Class RemoteMaintenanceException
- * @package SzuniSoft\SzamlazzHu\Client\ApiErrors
+ * @package Nemerichun\SzamlazzHu\Client\ApiErrors
  *
  * The remote server and services are under maintenance
  */

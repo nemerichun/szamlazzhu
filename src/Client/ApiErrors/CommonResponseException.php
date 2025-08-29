@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Client\ApiErrors;
+namespace Nemerichun\SzamlazzHu\Client\ApiErrors;
 
 
 use Psr\Http\Message\ResponseInterface;
@@ -9,7 +9,7 @@ use Throwable;
 
 /**
  * Class CommonException
- * @package SzuniSoft\SzamlazzHu\Client\ApiErrors
+ * @package Nemerichun\SzamlazzHu\Client\ApiErrors
  *
  * Should be not dedicated error when remote error answer
  * does not contain error code or it does but unknown.

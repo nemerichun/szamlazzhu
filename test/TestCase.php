@@ -1,10 +1,10 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests;
+namespace Nemerichun\SzamlazzHu\Tests;
 
 
-use SzuniSoft\SzamlazzHu\Providers\SzamlazzHuServiceProvider;
+use Nemerichun\SzamlazzHu\Providers\SzamlazzHuServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {

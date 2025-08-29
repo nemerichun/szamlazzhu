@@ -1,24 +1,24 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Internal;
+namespace Nemerichun\SzamlazzHu\Internal;
 
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableCustomer;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableItem;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableItemCollection;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableMerchant;
-use SzuniSoft\SzamlazzHu\Internal\Support\CustomerHolder;
-use SzuniSoft\SzamlazzHu\Internal\Support\ItemHolder;
-use SzuniSoft\SzamlazzHu\Internal\Support\MerchantHolder;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableCustomer;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableItem;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableItemCollection;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableMerchant;
+use Nemerichun\SzamlazzHu\Internal\Support\CustomerHolder;
+use Nemerichun\SzamlazzHu\Internal\Support\ItemHolder;
+use Nemerichun\SzamlazzHu\Internal\Support\MerchantHolder;
 
 /**
  * Class AbstractInvoice
- * @package SzuniSoft\SzamlazzHu\Internal
+ * @package Nemerichun\SzamlazzHu\Internal
  *
  * [Self attributes]
  * @property boolean $isElectronic

@@ -1,29 +1,29 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu;
+namespace Nemerichun\SzamlazzHu;
 
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
-use SzuniSoft\SzamlazzHu\Client\Errors\CancellationReceiptObtainException;
-use SzuniSoft\SzamlazzHu\Client\Errors\ModelValidationException;
-use SzuniSoft\SzamlazzHu\Client\Errors\ReceiptAlreadyCancelledException;
-use SzuniSoft\SzamlazzHu\Client\Errors\ReceiptValidationException;
-use SzuniSoft\SzamlazzHu\Client\Models\ReceiptCancellationResponse;
-use SzuniSoft\SzamlazzHu\Client\Models\ReceiptCreationResponse;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableItem;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableItemCollection;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayablePayment;
-use SzuniSoft\SzamlazzHu\Contracts\ArrayablePaymentCollection;
-use SzuniSoft\SzamlazzHu\Internal\AbstractModel;
-use SzuniSoft\SzamlazzHu\Internal\Support\ClientAccessor;
-use SzuniSoft\SzamlazzHu\Internal\Support\ItemHolder;
-use SzuniSoft\SzamlazzHu\Internal\Support\PaymentHolder;
+use Nemerichun\SzamlazzHu\Client\Errors\CancellationReceiptObtainException;
+use Nemerichun\SzamlazzHu\Client\Errors\ModelValidationException;
+use Nemerichun\SzamlazzHu\Client\Errors\ReceiptAlreadyCancelledException;
+use Nemerichun\SzamlazzHu\Client\Errors\ReceiptValidationException;
+use Nemerichun\SzamlazzHu\Client\Models\ReceiptCancellationResponse;
+use Nemerichun\SzamlazzHu\Client\Models\ReceiptCreationResponse;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableItem;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableItemCollection;
+use Nemerichun\SzamlazzHu\Contracts\ArrayablePayment;
+use Nemerichun\SzamlazzHu\Contracts\ArrayablePaymentCollection;
+use Nemerichun\SzamlazzHu\Internal\AbstractModel;
+use Nemerichun\SzamlazzHu\Internal\Support\ClientAccessor;
+use Nemerichun\SzamlazzHu\Internal\Support\ItemHolder;
+use Nemerichun\SzamlazzHu\Internal\Support\PaymentHolder;
 
 /**
  * Class Receipt
- * @package SzuniSoft\SzamlazzHu
+ * @package Nemerichun\SzamlazzHu
  *
  * [Attributes]
  * @property string $prefix

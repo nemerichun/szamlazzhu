@@ -1,7 +1,7 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Contracts;
+namespace Nemerichun\SzamlazzHu\Contracts;
 
 
 interface ArrayableItem

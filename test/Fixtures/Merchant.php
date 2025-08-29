@@ -1,10 +1,10 @@
 <?php
 
 
-namespace SzuniSoft\SzamlazzHu\Tests\Fixtures;
+namespace Nemerichun\SzamlazzHu\Tests\Fixtures;
 
 
-use SzuniSoft\SzamlazzHu\Contracts\ArrayableMerchant;
+use Nemerichun\SzamlazzHu\Contracts\ArrayableMerchant;
 
 class Merchant implements ArrayableMerchant {
     protected $bank;
