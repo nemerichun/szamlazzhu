@@ -1,5 +1,5 @@
 # laravel-szamlazzhu
-Implementation for Laravel which was made to support Szamlazz.hu Agent version of **3.4** and higher.
+Implementation for Laravel which was made to support Szamlazz.hu Agent version of **3.4** and higher. 
 
 ## Installation
 ```bash
