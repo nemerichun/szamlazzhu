@@ -64,6 +64,12 @@
   "config": {
     "sort-packages": true
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/nemerichun/laravel-szamlazzhu.git"
+    }
+  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
