@@ -2,7 +2,7 @@
   "name": "nemerichun/laravel-szamlazzhu",
   "license": "MIT",
   "description": "Szamlazz.hu integration for Laravel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "library",
   "keywords": [
     "laravel",
