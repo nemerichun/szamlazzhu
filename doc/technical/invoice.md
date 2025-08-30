@@ -243,6 +243,13 @@ $invoiceNumber = 'XXX-2018-123';
 $invoice = $client->getInvoice($invoiceNumber); // Result is instance of Invoice or null if not found.
 ```
 
+### By invoice number, returns XML (getCommonInvoiceXml)
+```php
+$invoiceNumber = 'XXX-2018-123';
+$invoice = $client->getCommonInvoiceXml($invoiceNumber); // Result is XML string or null if not found.
+```
+
+
 ### With failure (getInvoiceOrFail)
 ```php
 $invoiceNumber = 'XXX-2018-123';

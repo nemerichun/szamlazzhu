@@ -1172,6 +1172,53 @@ class Client
     }
 
     /**
+     * Get common invoice data in xml format
+     * @param $invoiceNumber
+     * @param $orderNumber
+     * @return string
+     * @throws CommonResponseException
+     * @throws InvoiceNotFoundException
+     */
+    public function getCommonInvoiceXml($invoiceNumber = null, $orderNumber = null): string
+    {
+        if (!$invoiceNumber && !$orderNumber) {
+            throw new InvalidArgumentException('Invoice or the orderNumber must be specified!');
+        }
+
+        /*
+         * Build invoice XML
+         */
+        $contents = $this->writer(
+            function (XMLWriter $writer) use (&$invoiceNumber, &$orderNumber) {
+                $this->writeCredentials($writer);
+                if ($orderNumber) {
+                    $writer->writeElement('rendelesSzam', $orderNumber);
+                }
+                else {
+                    $writer->writeElement('szamlaszam', $invoiceNumber);
+                }
+            },
+            ...self::ACTIONS['GET_COMMON_INVOICE']['schema']
+        );
+
+        try {
+
+            /*
+             * Response obtained
+             * */
+            $contents = (string)$this->send(self::ACTIONS['GET_COMMON_INVOICE']['name'], $contents)->getBody();
+
+            return $contents;
+        } catch (CommonResponseException $e) {
+            throw $e;
+        } catch (InvoiceNotFoundException $e) {
+            throw $e;
+        } catch (InvalidArgumentException $e) {
+            throw $e;
+        }
+    }
+
+    /**
      * @param string|AbstractInvoice|null $invoiceNumber
      * @param null                        $orderNumber
      *
@@ -1180,7 +1227,7 @@ class Client
      * @throws InvoiceNotFoundException
      * @throws InvalidArgumentException
      */
-    protected function getCommonInvoice($invoiceNumber = null, $orderNumber = null)
+    public function getCommonInvoice($invoiceNumber = null, $orderNumber = null): array
     {
 
         if (!$invoiceNumber && !$orderNumber) {
@@ -1215,6 +1262,7 @@ class Client
 
             // General attributes
             $head = [
+                'id'                  => isset($xml['alap']['id']) ? (int)$xml['alap']['id'] : null,
                 'isElectronic'        => Str::startsWith($xml['alap']['szamlaszam'], 'E-'),
                 'isPrepaymentRequest' => Str::startsWith($xml['alap']['szamlaszam'], 'D-'),
                 'invoiceNumber'       => $xml['alap']['szamlaszam'],
