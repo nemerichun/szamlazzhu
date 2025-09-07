@@ -64,6 +64,16 @@ class Client
         ReceiptValidationRules,
         XmlParser;
 
+    public const NON_EU_COMPANY = 7;
+
+    public const EU_COMPANY = 6;
+
+    public const HUNGARIAN_TAX_ID = 1;
+
+    public const UNKNOWN = 0;
+
+    public const NO_TAX_ID = -1;
+
     /*
      * All the available actions.
      * */
